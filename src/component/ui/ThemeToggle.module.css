@@ -1,0 +1,45 @@
+.input {
+  display: none;
+}
+.label {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  display: block;
+  position: relative;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.light {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+.toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.svg {
+  background-color: #003;
+}
+.input:checked + label span {
+  left: 33px;
+}
+.toggle svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 23px;
+  height: auto;
+  fill: yellow;
+  color: orange;
+}

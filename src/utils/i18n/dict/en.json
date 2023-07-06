@@ -1,0 +1,27 @@
+{
+  "sidebar": {
+    "title": "Web Developer",
+    "whoami": "whoami",
+    "portfolio": "portfolio",
+    "skills": "skills",
+    "contact": "contact"
+  },
+  "whoami": "Clark\nA web developer\nLoving animation",
+  "portfolio": {
+    "title": "web developer portfolio"
+  },
+  "skills": {
+    "title": "Coding and Me",
+    "content": "My love for programming and web app development started out as a strong interest in computer science and the internet. By learning to program, I found it very rewarding to create something from nothing. Also, it is one of my great interests to keep learning and exploring new technologies. I like to learn about the latest technology and development trends and try to apply them to my projects. I also love finding and sharing knowledge about technology on development platforms like Stack Overflow, Github, etc. I hope to become a full-stack developer and provide users with excellent web applications while constantly learning and exploring innovative technologies."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "user": "User",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  }
+}
