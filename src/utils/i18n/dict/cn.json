@@ -6,7 +6,7 @@
     "skills": "技能",
     "contact": "联系方式"
   },
-  "whoami": "Clark\n一位网页开发者\n热爱动画",
+  "whoami": "Clark\n一个全栈开发者\n热衷于React和Kotlin",
   "portfolio": {
     "title": "网页开发者作品集"
   },
@@ -23,5 +23,11 @@
       "message": "留言",
       "submit": "提交"
     }
+  },
+  "modal": {
+    "gotoapp": "转到APP",
+    "gotogithub": "转到Github",
+    "portfolio": "这是一个使用TypeScript构建的Next.js项目,用于进行静态类型检查。 Storybook集成用于独立开发UI组件。 后端REST API使用Swagger/OpenAPI规范设计,以提供清晰的文档。 通过全局CSS文件和react-responsive库来实现响应式设计,根据屏幕大小调整样式。状态管理使用Zustand全局状态、useContext跨组件共享数据以及useState本地组件状态的组合来处理。 主题通过全局状态控制的CSS变量启用。 用户可以在浅色和深色主题之间切换。 UI仿照jacekjeznach的。",
+    "imageplus": ""
   }
 }

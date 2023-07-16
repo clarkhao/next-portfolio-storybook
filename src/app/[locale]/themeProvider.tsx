@@ -3,6 +3,10 @@ import React from "react";
 import { useStore } from "@/store";
 import HomeSidebar from "@/component/layout/HomeSidebar";
 import { getDictionary } from "@/utils";
+//hooks
+import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
+import { FaDiscord, FaGithub } from "react-icons/fa";
 
 type TThemeContext = {
   /**
@@ -13,22 +17,26 @@ type TThemeContext = {
    * sidebar i18n
    */
   sidebar: Record<string, any>;
-}
+};
 
 export default function ThemeContext({ children, ...props }: TThemeContext) {
   const [mode] = useStore((state) => [state.themeMode]);
   const [activeSection, setActiveSection] = React.useState<string>("");
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   React.useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("article");
       const scrollPosition = window.scrollY;
 
-      sections.forEach((section) => {
+      sections.forEach((section, index) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+          setActiveSection(sections[3].id);
+        }
         if (
           scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight - 100
+          scrollPosition < sectionTop + sectionHeight - 50
         ) {
           setActiveSection(section.id);
         }
@@ -55,6 +63,16 @@ export default function ThemeContext({ children, ...props }: TThemeContext) {
         }}
       />
       {children}
+      {isMobile ? (
+        <div className="social-icons">
+          <Link href="https://github.com/clarkhao" replace={false}>
+            <FaGithub />
+          </Link>
+          <Link href="https://discordapp.com/users/1091950789255237753">
+            <FaDiscord />
+          </Link>
+        </div>
+      ) : null}
     </div>
   );
 }

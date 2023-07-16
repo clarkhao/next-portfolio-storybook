@@ -6,7 +6,7 @@
     "skills": "スキル",
     "contact": "お問い合わせ"
   },
-  "whoami": "Clark\nWeb開発者\nアニメーションが好き",
+  "whoami": "Clark\nReactと Kotlinに\n情熱を持つフルスタック開発者",
   "portfolio": {
     "title": "Web開発者のポートフォリオ"
   },
@@ -23,5 +23,11 @@
       "message": "メッセージ",
       "submit": "送信"
     }
+  },
+  "modal": {
+    "gotoapp": "アプリに移動",
+    "gotogithub": "GitHubに移動",
+    "portfolio": "これは、静的型チェックのためにTypeScriptで構築されたNext.jsプロジェクトです。 Storybookは、UIコンポーネントを独立して開発するために統合されています。バックエンドのREST APIは、明確なドキュメントのためにSwagger / OpenAPI仕様で設計されています。グローバルなCSSファイルとreact-responsiveライブラリを使用して、画面サイズに基づいてスタイリングを調整することにより、レスポンシブデザインが実装されています。状態管理は、グローバル状態のZustand、コンポーネント間でデータを共有するuseContext、およびローカルコンポーネント状態のuseStateの組み合わせで処理されます。テーマは、グローバル状態を介して制御されるCSS変数を介して有効になります。ユーザーはライトとダークのテーマを切り替えることができます。 UIはjacekjeznach'sから模倣しています。",
+    "imageplus": ""
   }
 }

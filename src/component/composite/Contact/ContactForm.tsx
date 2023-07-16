@@ -7,7 +7,7 @@ import axios from "axios";
 import style from "./ContactForm.module.css";
 //组件
 import Input from "../../ui/Input";
-import { Button } from "../../ui/Button";
+import Button from "../../ui/Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //hook

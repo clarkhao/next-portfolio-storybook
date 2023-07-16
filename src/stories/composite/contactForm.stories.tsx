@@ -15,7 +15,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    content: {
+      title: "Form",
+      form: {
+        "user": "User",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+      }
+    }
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
   }

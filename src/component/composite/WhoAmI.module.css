@@ -8,7 +8,6 @@
   align-items: flex-start;
 }
 .space {
-  font-size: 30px;
   visibility: hidden;
 }
 .text {
@@ -16,7 +15,7 @@
 }
 .typing span, .typing br {
   opacity: 0;
-  animation: fade-in 0.1s ease forwards;
+  animation: fade-in 0.2s ease forwards;
 }
 @keyframes fade-in {
   from {

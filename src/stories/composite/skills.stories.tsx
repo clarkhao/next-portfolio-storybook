@@ -11,7 +11,12 @@ export default meta;
 type Story = StoryObj<typeof Skills>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    content: {
+      title: "About Me",
+      content: ""
+    }
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
   }

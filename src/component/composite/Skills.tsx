@@ -1,5 +1,6 @@
 "use client";
 //应用
+import React from 'react';
 //style
 import style from "./Skills.module.css";
 //组件
@@ -12,23 +13,12 @@ type TSkills = {
   content: Record<string, any>;
 };
 
-const texts = [
-  "React",
-  "JavaScript",
-  "CSS",
-  "HTML",
-  "Node.js",
-  "Postgresql",
-  "Express",
-  "Mui",
-  "Typescrpit",
-  "Git",
-  "GitHub",
-];
-
 function Skills({ ...props }: TSkills) {
+  React.useEffect(() => {
+    console.log(window.innerWidth)
+  }, [])
   return (
-    <article id="skills" className={style.container}>
+    <article id="skills" className={[style.container, 'skills'].join(" ")}>
       <section>
         <h1>{props.content.title}</h1>
         <main>
