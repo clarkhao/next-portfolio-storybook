@@ -26,7 +26,6 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   // // If you have one
   if (
@@ -36,7 +35,12 @@ export function middleware(request: NextRequest) {
       // Your other files in `public`
       "/next.svg",
       "/vercel.svg",
-    ].includes(pathname)
+      "/marker-icon-2x.png",
+      "/marker-shadow.png",
+      "/imageplus/",
+      "/portfolio/",
+      "/animflow/"
+    ].some((el) => pathname.startsWith(el))
   )
     return;
 

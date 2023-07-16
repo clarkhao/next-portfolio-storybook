@@ -1,0 +1,43 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 2px black solid;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: 101;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.popup_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.popup>svg {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  fill: white;
+  cursor: pointer;
+}
+.appear {
+  animation: appear .3s ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.intro {
+  overflow: auto;
+}

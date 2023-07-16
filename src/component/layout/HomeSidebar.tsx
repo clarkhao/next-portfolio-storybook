@@ -24,13 +24,12 @@ type THomeSidebar = {
 
 function HomeSidebar({ ...props }: THomeSidebar) {
   const [themeMode, i18n, toggleHash] = useStore((state) => [state.themeMode, state.i18n, state.toggleHash]);
-  const path = usePathname();
-  console.log(path)
   return (
     <div
       className={[
         style.container,
         themeMode === "light" ? style.light : style.dark,
+        "sidebar"
       ].join(" ")}
     >
       <div

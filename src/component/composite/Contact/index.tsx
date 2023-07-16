@@ -15,7 +15,7 @@ type TContact = {
 
 function Contact({ ...props }: TContact) {
   return (
-    <article className={style.container} id="contact">
+    <article className={[style.container, "contact"].join(" ")} id="contact">
       <ContactForm content={props.content} />
       <ContactMap />
     </article>

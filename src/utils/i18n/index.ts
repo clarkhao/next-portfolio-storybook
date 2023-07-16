@@ -12,5 +12,10 @@ const dictionaries = {
   cn: () => import("./dict/cn.json").then((module) => module.default),
   jp: () => import("./dict/jp.json").then((module) => module.default),
 };
-
-export const getDictionary = async (locale: Locale) => dictionaries[locale]();
+export const getDictionary = async (locale: Locale) => {
+  return locale == "en"
+    ? dictionaries.en()
+    : locale == "cn"
+    ? dictionaries.cn()
+    : dictionaries.jp();
+};

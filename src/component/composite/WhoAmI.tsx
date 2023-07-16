@@ -6,7 +6,7 @@ import style from "./WhoAmI.module.css";
 //组件
 import Letter from "../ui/Letter";
 
-type TWhoAmI = {
+export type TWhoAmI = {
   /**
    * whoami i18n
    */
@@ -18,14 +18,14 @@ type TWhoAmI = {
 };
 
 function WhoAmI({ ...props }: TWhoAmI) {
-  const [typing, setTyping] = React.useState(false);
+  const [typing, setTyping] = React.useState(true);
   React.useEffect(() => {
-    setTyping(true);
     const timer = window.setTimeout(() => {
       setTyping(false);
-    }, props.content.length * 150);
+    }, props.content.length * 120);
     return () => window.clearTimeout(timer);
   }, []);
+
   return (
     <article id="whoami" className={style.container}>
       <div className={[style.text, typing ? style.typing : ""].join(" ")}>
@@ -52,10 +52,10 @@ function WhoAmI({ ...props }: TWhoAmI) {
                 typing
                   ? {
                       animationDelay: `${0.1 * i}s`,
-                      width: props.locale !== "en" ? "72px" : "48px",
                     }
-                  : { width: props.locale !== "en" ? "72px" : "48px" }
+                  : {}
               }
+              locale={props.locale}
             >
               {el}
             </Letter>
@@ -66,4 +66,18 @@ function WhoAmI({ ...props }: TWhoAmI) {
   );
 }
 
-export default WhoAmI;
+function LaterWhoAmIUI({ ...props }: TWhoAmI) {
+  const [timer, setTimer] = React.useState(0);
+  const [mounted, setMouned] = React.useState(false);
+  React.useEffect(() => {
+    setTimer(window.setTimeout(() => setMouned(true), 500));
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return mounted ? (
+    <WhoAmI {...props} />
+  ) : (
+    <div className={style.container}></div>
+  );
+}
+export default LaterWhoAmIUI;

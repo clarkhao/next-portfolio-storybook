@@ -6,7 +6,7 @@
     "skills": "skills",
     "contact": "contact"
   },
-  "whoami": "Clark\nA web developer\nLoving animation",
+  "whoami": "Clark\nA Fullstack Developer\npassionate about React and Kotlin",
   "portfolio": {
     "title": "web developer portfolio"
   },
@@ -23,5 +23,11 @@
       "message": "Message",
       "submit": "Submit"
     }
+  },
+  "modal": {
+    "gotoapp": "Go To APP",
+    "gotogithub": "Go To Github",
+    "portfolio": "This is a Next.js project built with TypeScript for static type checking. Storybook is integrated for developing UI components in isolation. The backend REST APIs are designed using Swagger/OpenAPI specifications for clear documentation. Responsive design is implemented using a global CSS file and the react-responsive library to adjust styling based on screen size.State management is handled using a combination of Zustand for global state, useContext for sharing data between components, and useState for local component state. Theming is enabled through CSS variables that are controlled via the global state. Users can toggle between light and dark themes. UI imitate from the jacekjeznach's.",
+    "imageplus": ""
   }
 }
