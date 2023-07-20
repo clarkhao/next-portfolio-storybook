@@ -1,5 +1,6 @@
 @import '../../style/theme.css';
 @import '../../style/responsive.css';
+@import '../../style/skeleton.css';
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
