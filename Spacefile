@@ -5,5 +5,4 @@ micros:
     src: ./
     engine: next
     primary: true
-    dev: npm run storybook
     public: true

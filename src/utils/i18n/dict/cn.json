@@ -1,18 +1,18 @@
 {
   "sidebar": {
-    "title": "网页开发者",
+    "title": "Web Dev",
     "whoami": "个人简介",
     "portfolio": "作品集",
-    "skills": "技能",
+    "skills": "技术栈",
     "contact": "联系方式"
   },
   "whoami": "Clark\n一个全栈开发者\n热衷于React和Kotlin",
   "portfolio": {
-    "title": "网页开发者作品集"
+    "title": "Web APP 开发者作品集"
   },
   "skills": {
     "title": "编程与我",
-    "content": "我对编程和网页应用程序开发的热爱始于对计算机科学和互联网的浓厚兴趣。通过学习编程，我发现从无到有创造出一些东西是非常有价值的。我喜欢学习最新的技术和开发趋势，并尝试将它们应用到我的项目中。我也喜欢在 Stack Overflow、Github 等开发平台上寻找和分享技术知识。我希望成为一名全栈开发者，为用户提供优秀的网页应用程序，同时不断学习和探索创新技术。"
+    "content": "出于对计算机科学和互联网的浓厚兴趣,我对编程和Web应用程序开发的热情油然而生。\nchatgpt、midjourney等AI给应用程序开发带来了巨大便利,也给我的工作提供了无限灵感。利用这些强大的新工具,我可以更快地将想法变成现实。\n我发现从零开始创建something,并最终将其实现,这种感觉非常有成就感。我享受把概念转换成实际作品的整个过程。\n我热衷于学习最新最前沿的技术和行业发展趋势,并积极在项目中实践应用。这不仅丰富了我的技术栈,也使我的作品能够紧跟时代。\n我的终极目标是成为一名出色的全栈开发者,能够独立构建整个Web应用程序。我希望创建简洁优雅且用户体验优秀的产品,解决人们实际需要。这需要我不断努力,积累各方面经验。"
   },
   "contact": {
     "title": "联系我",
@@ -25,9 +25,9 @@
     }
   },
   "modal": {
-    "gotoapp": "转到APP",
-    "gotogithub": "转到Github",
-    "portfolio": "这是一个使用TypeScript构建的Next.js项目,用于进行静态类型检查。 Storybook集成用于独立开发UI组件。 后端REST API使用Swagger/OpenAPI规范设计,以提供清晰的文档。 通过全局CSS文件和react-responsive库来实现响应式设计,根据屏幕大小调整样式。状态管理使用Zustand全局状态、useContext跨组件共享数据以及useState本地组件状态的组合来处理。 主题通过全局状态控制的CSS变量启用。 用户可以在浅色和深色主题之间切换。 UI仿照jacekjeznach的。",
-    "imageplus": ""
+    "gotoapp": "进入APP",
+    "gotogithub": "Github",
+    "portfolio": "这是一个使用TypeScript构建的Next.js项目,用于进行静态类型检查。Storybook集成用于独立开发UI组件。通过全局CSS文件和react-responsive库来实现响应式设计,根据屏幕大小调整样式。状态管理使用Zustand全局状态、useContext跨组件共享数据以及useState本地组件状态的组合来处理。主题通过全局状态控制的CSS变量启用。用户可以在浅色和深色主题之间切换。",
+    "imageplus": "这是一个具有Kotlin Spring Webflux响应式后端和使用TypeScript编写的Vite React前端的现代Web应用程序。后端方面，使用Spring Webflux REST API,以进行非阻塞请求, 利用Kotlin实现简洁的代码。认证使用JWT和OAuth2。分别在前端和后端实施RBAC以控制对页面/数据/API的访问。React前端使用具有钩子的函数组件, 通过Zustand处理全局状态管理，结合useContext和useState处理局部或者组件状态。通过CSS和react-responsive实现响应式设计。可以使用全局CSS变量控制UI主题。Storybook启用隔离的UI组件开发。React路由器提供基于页面的导航系统。数据存储方面， PostgreSQL关系数据库用作存储用户数据。用户上传的图像存储在AWS S3上。文件元数据以document形式存储, 点赞数据以Graph db方式存储，两者均存储在SurrealDB的数据库中。其他方面，React i18n处理国际化。使用服务器发送事件(SSE)实时推送点赞。该应用程序具有类Unsplash的瀑布流布局。"
   }
 }

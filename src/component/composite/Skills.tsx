@@ -43,6 +43,7 @@ function Skills({ ...props }: TSkills) {
           "HTML",
           "Node.js",
           "Postgresql",
+          "Surrealdb",
           "Express",
           "Mui",
           "Git",
@@ -52,6 +53,7 @@ function Skills({ ...props }: TSkills) {
           "SpringBoot",
           "Storybook",
           "Animation",
+          "Figma"
         ]}
       </TagCloud>
     </article>

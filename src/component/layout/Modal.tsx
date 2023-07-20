@@ -6,11 +6,14 @@ import style from "./Modal.module.css";
 import { FiXCircle } from "react-icons/fi";
 import Button from "../ui/Button";
 import CarouselComponent from "../ui/Carousel";
+import { FiGithub } from "react-icons/fi";
 //data
-import { urls } from "../../utils/data/url";
+import { urls, modalUrls } from "../../utils/data/url";
 //hooks
 import { useStore } from "../../store";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
+
 
 export type TPopup = {
   /**
@@ -41,6 +44,7 @@ function Modal({ ...props }: TPopup) {
     props.setAppear(false);
   };
   const list = urls[props.index];
+
   const isDesktop = useMediaQuery({ minWidth: 1224 });
 
   const isTablet = useMediaQuery({ maxWidth: 1224, minWidth: 480 });
@@ -84,8 +88,39 @@ function Modal({ ...props }: TPopup) {
         <p>{props.content[props.index]}</p>
       </main>
       <div className={style.popup_btn}>
-        <Button primary label={props.content.gotoapp} />
-        <Button primary onClick={handleClick} label={props.content.gotogithub} />
+        <Link
+          href={modalUrls["appurl"][props.index]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button primary label={props.content.gotoapp} />
+        </Link>
+        {props.index === "imageplus" ? (
+          <div style={{ display: "flex", justifyContent: "space-between", flexDirection: "row", columnGap: "5px"}}>
+            <Link
+              href={modalUrls["githuburl"][props.index].backend}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button primary label="BE" />
+            </Link>
+            <Link
+              href={modalUrls["githuburl"][props.index].frontend}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button primary label="FE" />
+            </Link>
+          </div>
+        ) : (
+          <Link
+            href={modalUrls["githuburl"][props.index].frontend}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button primary label={props.content.gotogithub} />
+          </Link>
+        )}
       </div>
       <style jsx>{`
         div.modal {

@@ -85,8 +85,8 @@ function Portfolio({ ...props }: TPortfolio) {
       </section>
       <div className={[style.wrapper, "portfolio"].join(" ")}>
         <PicCard
-          foreSrc="/portfolio/light.png"
-          backSrc="/portfolio/index.png"
+          foreSrc="/portfolio/light.webp"
+          backSrc="/portfolio/index.webp"
           list={["Frontend", "React", "Next.js", "Typescript", "Storybook"]}
           toggleModal={() => {
             setIndex("portfolio");
@@ -99,8 +99,8 @@ function Portfolio({ ...props }: TPortfolio) {
           }}
         />
         <PicCard
-          foreSrc="/imageplus/index.png"
-          backSrc="/imageplus/black-index.png"
+          foreSrc="/imageplus/index.webp"
+          backSrc="/imageplus/black-index.webp"
           list={[
             "Fullstack",
             "TS",
@@ -148,7 +148,7 @@ function Portfolio({ ...props }: TPortfolio) {
       {appear ? <Modal appear setAppear={setAppear} index={index} content={modal}/> : null}
       <style jsx>{`
         .portfolio {
-          width: ${size.width}px;
+          width: ${size?.width}px;
           flex-direction: ${isColumn ? "row" : "column"};
           align-items: ${isColumn ? "start" : "center"};
         }
