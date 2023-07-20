@@ -7,11 +7,7 @@
   .light-container .content {
     margin-left: 0;
   }
-  .dark-container #whoami,
-  .light-container #whoami {
-    padding-top: 100px;
-    height: auto;
-  }
+
 }
 @media screen and (max-width: 1024px) {
   .light-container #skills.skills,

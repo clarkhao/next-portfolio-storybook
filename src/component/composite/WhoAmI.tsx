@@ -70,7 +70,7 @@ function LaterWhoAmIUI({ ...props }: TWhoAmI) {
   const [timer, setTimer] = React.useState(0);
   const [mounted, setMouned] = React.useState(false);
   React.useEffect(() => {
-    setTimer(window.setTimeout(() => setMouned(true), 500));
+    setTimer(window.setTimeout(() => setMouned(true), 100));
     return () => window.clearTimeout(timer);
   }, []);
 
