@@ -6,13 +6,13 @@
     "skills": "skills",
     "contact": "contact"
   },
-  "whoami": "Clark\nA Fullstack Developer\npassionate about React and Kotlin",
+  "whoami": "Clark\nA Fullstack Developer\nPassionate about React and Kotlin",
   "portfolio": {
-    "title": "web developer portfolio"
+    "title": "Web APP Portfolio"
   },
   "skills": {
     "title": "Coding and Me",
-    "content": "My love for programming and web app development started out as a strong interest in computer science and the internet. By learning to program, I found it very rewarding to create something from nothing. Also, it is one of my great interests to keep learning and exploring new technologies. I like to learn about the latest technology and development trends and try to apply them to my projects. I also love finding and sharing knowledge about technology on development platforms like Stack Overflow, Github, etc. I hope to become a full-stack developer and provide users with excellent web applications while constantly learning and exploring innovative technologies."
+    "content": "My passion for programming and web application development stems from my strong interest in computer science and the internet. AI tools like chatgpt and midjourney have brought tremendous convenience to app development while also providing endless inspiration for my work. With these powerful new tools I can turn ideas into reality much faster. I find it immensely satisfying to create something from scratch and ultimately bring it to fruition. I enjoy the entire process of turning concepts into tangible creations. I love staying on top of the latest technologies and industry trends, actively implementing them in my projects. This not only enriches my tech stack but allows my work to stay cutting-edge. My ultimate goal is to become an exceptional full stack developer capable of building entire web apps independently. I want to build products with clean, elegant interfaces and excellent user experiences that solve real needs. This requires constant effort from me to accumulate diverse skills and experience."
   },
   "contact": {
     "title": "Contact Me",
@@ -26,8 +26,8 @@
   },
   "modal": {
     "gotoapp": "Go To APP",
-    "gotogithub": "Go To Github",
-    "portfolio": "This is a Next.js project built with TypeScript for static type checking. Storybook is integrated for developing UI components in isolation. The backend REST APIs are designed using Swagger/OpenAPI specifications for clear documentation. Responsive design is implemented using a global CSS file and the react-responsive library to adjust styling based on screen size.State management is handled using a combination of Zustand for global state, useContext for sharing data between components, and useState for local component state. Theming is enabled through CSS variables that are controlled via the global state. Users can toggle between light and dark themes. UI imitate from the jacekjeznach's.",
-    "imageplus": ""
+    "gotogithub": "Github",
+    "portfolio": "This is a Next.js project built with TypeScript for static type checking.\nStorybook is integrated for developing UI components in isolation.\nThe backend REST APIs are designed using Swagger/OpenAPI specifications for clear documentation.\nResponsive design is implemented using a global CSS file and the react-responsive library to adjust styling based on screen size.\nState management is handled using a combination of Zustand for global state, useContext for sharing data between components, and useState for local component state.\nTheming is enabled through CSS variables that are controlled via the global state. Users can toggle between light and dark themes.",
+    "imageplus": "This is a modern web application with a Kotlin Spring Webflux reactive backend and Vite React frontend written in TypeScript. The backend exposes Spring Webflux REST APIs for non-blocking requests, utilizing Kotlin for concise code. Authentication is handled via JWT and OAuth2. RBAC is enforced on both frontend and backend to control access to pages/data/APIs. The React frontend uses function components with hooks, managing global state with Zustand and local state with useContext and useState. Responsive design is implemented via CSS and react-responsive. UI theming can be controlled with global CSS variables. Storybook enables isolated UI component development. React Router provides a page-based navigation system. For data, PostgreSQL relational database stores user data. User uploaded images are stored on AWS S3. File metadata is stored as documents and likes are stored graphically, both in SurrealDB's database. Other features include i18n with React i18n and realtime like updates via Server Sent Events. The app features a Pinterest-like waterfall layout."
   }
 }

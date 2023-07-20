@@ -54,6 +54,7 @@ function PicCard({ ...props }: TPicCard) {
           height={props.styles.imgHeight}
           src={props.foreSrc ?? "https://picsum.photos/400/267?random=1"}
           alt="project"
+          loading="lazy"
         />
         <Image
           className={style.back}
@@ -61,6 +62,7 @@ function PicCard({ ...props }: TPicCard) {
           height={props.styles.imgHeight}
           src={props.backSrc ?? "https://picsum.photos/400/267?random=2"}
           alt="project"
+          loading="lazy"
         />
         {onLabel ? <Labels list={props.list} /> : null}
       </div>

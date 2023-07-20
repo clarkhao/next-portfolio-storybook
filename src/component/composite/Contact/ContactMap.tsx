@@ -24,7 +24,7 @@ function ContactMap({ ...props }: TContactMap) {
       attributionControl={false}
       style={{ width: "500px", height: "386px", marginTop: "40px" }}
     >
-      <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <TileLayer url="https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png" />
       <Marker position={[39.085, 117.199]}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
