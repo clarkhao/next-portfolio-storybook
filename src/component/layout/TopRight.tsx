@@ -2,7 +2,7 @@ import React from "react";
 //style
 import style from "./TopRight.module.css";
 //组件
-import ThemeToggle from "../ui/ThemeToggle";
+import ThemeToggleUI from "../../stories/ui/ThemeToggle/ThemeToggle";
 import Selector from "../ui/Selector";
 
 type TThemeI18nLayout = {
@@ -33,7 +33,7 @@ function ThemeI18nLayout({ left, right, ...props }: TThemeI18nLayout) {
 function TopRight({ size = 60, ...props }: TThemeI18n) {
   return (
     <>
-      <ThemeI18nLayout left={<Selector />} right={<ThemeToggle />} />
+      <ThemeI18nLayout left={<Selector />} right={<ThemeToggleUI />} />
     </>
   );
 }

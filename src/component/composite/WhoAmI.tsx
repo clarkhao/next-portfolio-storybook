@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 //style
 import style from "./WhoAmI.module.css";
 //组件
-import Letter from "../ui/Letter";
+import LetterUI from "../../stories/ui/Letter/Letter";
 
 export type TWhoAmI = {
   /**
@@ -46,7 +46,7 @@ function WhoAmI({ ...props }: TWhoAmI) {
               m
             </span>
           ) : (
-            <Letter
+            <LetterUI
               key={el + i + "_letter"}
               styles={
                 typing
@@ -58,7 +58,7 @@ function WhoAmI({ ...props }: TWhoAmI) {
               locale={props.locale}
             >
               {el}
-            </Letter>
+            </LetterUI>
           );
         })}
       </div>

@@ -6,8 +6,8 @@ import axios from "axios";
 //style
 import style from "./ContactForm.module.css";
 //组件
-import Input from "../../ui/Input";
-import Button from "../../ui/Button";
+import InputUI from "../../../stories/ui/Input/Input";
+import { ButtonUI } from "../../../stories/ui/Button/Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //hook
@@ -64,7 +64,7 @@ function ContactForm({ ...props }: TContactForm) {
       <h1>{props.content.title}</h1>
       <form className={style.form}>
         <div className={style.first}>
-          <Input
+          <InputUI
             icon={null}
             labelText={props.content.form.user}
             name="user"
@@ -78,7 +78,7 @@ function ContactForm({ ...props }: TContactForm) {
               setErrMsg((prev) => ({ ...prev, user: "" }));
             }}
           />
-          <Input
+          <InputUI
             icon={null}
             labelText={props.content.form.email}
             name="email"
@@ -93,7 +93,7 @@ function ContactForm({ ...props }: TContactForm) {
             }}
           />
         </div>
-        <Input
+        <InputUI
           icon={null}
           labelText={props.content.form.subject}
           name="subject"
@@ -127,7 +127,7 @@ function ContactForm({ ...props }: TContactForm) {
           />
           <label className={style.label} htmlFor="contact-text"></label>
         </div>
-        <Button primary label="Submit" onClick={submitHandler} />
+        <ButtonUI primary label="Submit" onClick={submitHandler} />
       </form>
       <ToastContainer />
     </div>

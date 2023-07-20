@@ -4,7 +4,7 @@ import React from "react";
 //style
 import style from "./PicCard.module.css";
 //组件
-import Labels from "../../../component/ui/Label";
+import LabelsUI from "../../../stories/ui/Labels/Labels";
 import Image from "next/image";
 //hooks
 import { useMediaQuery } from "react-responsive";
@@ -64,7 +64,7 @@ function PicCard({ ...props }: TPicCard) {
           alt="project"
           loading="lazy"
         />
-        {onLabel ? <Labels list={props.list} /> : null}
+        {onLabel ? <LabelsUI list={props.list} /> : null}
       </div>
       <style jsx>{`
         div.card-container {
