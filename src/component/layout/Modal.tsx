@@ -4,9 +4,8 @@ import React, { useRef } from "react";
 import style from "./Modal.module.css";
 //组件
 import { FiXCircle } from "react-icons/fi";
-import Button from "../ui/Button";
-import CarouselComponent from "../ui/Carousel";
-import { FiGithub } from "react-icons/fi";
+import {ButtonUI} from "../../stories/ui/Button/Button";
+import CarouselComponent from "../../stories/ui/Carousel/Carousel";
 //data
 import { urls, modalUrls } from "../../utils/data/url";
 //hooks
@@ -93,7 +92,7 @@ function Modal({ ...props }: TPopup) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button primary label={props.content.gotoapp} />
+          <ButtonUI primary label={props.content.gotoapp} />
         </Link>
         {props.index === "imageplus" ? (
           <div style={{ display: "flex", justifyContent: "space-between", flexDirection: "row", columnGap: "5px"}}>
@@ -102,14 +101,14 @@ function Modal({ ...props }: TPopup) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button primary label="BE" />
+              <ButtonUI primary label="BE" />
             </Link>
             <Link
               href={modalUrls["githuburl"][props.index].frontend}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button primary label="FE" />
+              <ButtonUI primary label="FE" />
             </Link>
           </div>
         ) : (
@@ -118,7 +117,7 @@ function Modal({ ...props }: TPopup) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button primary label={props.content.gotogithub} />
+            <ButtonUI primary label={props.content.gotogithub} />
           </Link>
         )}
       </div>
