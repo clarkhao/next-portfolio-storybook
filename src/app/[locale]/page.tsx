@@ -10,31 +10,26 @@ import { getDictionary } from "@/utils";
 
 const Portfolio = dynamic(() => import("@/component/composite/Portfolio"), {
   ssr: false,
+  loading: () => <div className="skeleton"></div>,
 });
 const Skills = dynamic(() => import("@/component/composite/Skills"), {
   ssr: false,
+  loading: () => <div className="skeleton"></div>,
 });
-const Contact = dynamic(() => import("@/component/composite/Contact"), {
-  ssr: false,
-});
+const Contact = dynamic(() => import("@/component/composite/Contact"));
 
 async function HomePage({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale as "cn" | "en" | "jp");
-  console.log(dict.modal);
-  console.log(Portfolio === null);
+
   return (
     <ThemeContext sidebar={dict.sidebar}>
       <div className={style.container}>
         <TopRight size={60} />
         <div className={[style.right, "content"].join(" ")}>
           <LaterWhoAmI content={dict.whoami} locale={params.locale} />
-          {Portfolio ? (
-            <Portfolio
-              content={{ portfolio: dict.portfolio, modal: dict.modal }}
-            />
-          ) : (
-            <div className="skeleton">loading...</div>
-          )}
+          <Portfolio
+            content={{ portfolio: dict.portfolio, modal: dict.modal }}
+          />
           <Skills content={dict.skills} />
           <Contact content={dict.contact} />
         </div>
