@@ -48,7 +48,7 @@ function HomeSidebar({ ...props }: THomeSidebar) {
         <ul>
           {["whoami", "portfolio", "skills", "contact"].map((el) => {
             return (
-              <li key={el}>
+              <li key={el} className={props.active === el ? style.active : ""}>
                 <Link
                   href={{ pathname: `/${i18n}`, hash: `#${el}` }}
                   onClick={() => {
@@ -56,9 +56,7 @@ function HomeSidebar({ ...props }: THomeSidebar) {
                     toggleHash(`#${el}`);
                   }}
                 >
-                  <li className={props.active === el ? style.active : ""}>
-                    {props.content[el]}
-                  </li>
+                  {props.content[el]}
                 </Link>
               </li>
             );
