@@ -44,7 +44,7 @@
   align-items: center;
   row-gap: 0px;
 }
-.side>ul>a {
+.side>ul>li {
   cursor: pointer;
   width: 100%;  
   height: 100%;
@@ -54,7 +54,7 @@
   border-bottom-style: solid;
   text-align: center;
 }
-.side>ul>a:active {
+.side>ul>li:active {
   background-color: #ff6464;
   transition: all .3s;
 }

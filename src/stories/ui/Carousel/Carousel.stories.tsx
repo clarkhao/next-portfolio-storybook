@@ -17,11 +17,11 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     imageList: [
-      "/imageplus/index.png",
-      "/imageplus/login.png",
-      "/imageplus/upload.png",
-      "/imageplus/profile-update.png",
-      "/imageplus/accounts-update.png",
+      "https://picsum.photos/seed/1/400/267",
+      "https://picsum.photos/seed/2/400/267",
+      "https://picsum.photos/seed/3/400/267",
+      "https://picsum.photos/seed/300/400/267",
+      "https://picsum.photos/seed/301/400/267",
     ],
     alt: 'project'
   },

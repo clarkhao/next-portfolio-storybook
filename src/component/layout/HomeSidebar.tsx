@@ -23,13 +23,17 @@ type THomeSidebar = {
 };
 
 function HomeSidebar({ ...props }: THomeSidebar) {
-  const [themeMode, i18n, toggleHash] = useStore((state) => [state.themeMode, state.i18n, state.toggleHash]);
+  const [themeMode, i18n, toggleHash] = useStore((state) => [
+    state.themeMode,
+    state.i18n,
+    state.toggleHash,
+  ]);
   return (
     <div
       className={[
         style.container,
         themeMode === "light" ? style.light : style.dark,
-        "sidebar"
+        "sidebar",
       ].join(" ")}
     >
       <div
@@ -38,24 +42,25 @@ function HomeSidebar({ ...props }: THomeSidebar) {
           themeMode === "light" ? style.lightTitle : style.darkTitle,
         ].join(" ")}
       >
-        {props.content['title']}
+        {props.content["title"]}
       </div>
       <div className={style.side}>
         <ul>
           {["whoami", "portfolio", "skills", "contact"].map((el) => {
             return (
-              <Link
-                href={{ pathname: `/${i18n}`, hash: `#${el}` }}
-                key={el}
-                onClick={() => {
-                  props.setActive(el);
-                  toggleHash(`#${el}`);
-                }}
-              >
-                <li className={props.active === el ? style.active : ""}>
-                {props.content[el]}
-                </li>
-              </Link>
+              <li key={el}>
+                <Link
+                  href={{ pathname: `/${i18n}`, hash: `#${el}` }}
+                  onClick={() => {
+                    props.setActive(el);
+                    toggleHash(`#${el}`);
+                  }}
+                >
+                  <li className={props.active === el ? style.active : ""}>
+                    {props.content[el]}
+                  </li>
+                </Link>
+              </li>
             );
           })}
         </ul>
